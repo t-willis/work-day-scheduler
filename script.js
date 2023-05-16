@@ -1,22 +1,23 @@
 $(function () {
-  var hour = dayjs().hour() -12;
+  var hour = dayjs().hour();
+  // printing date to currentDay id in header
   $("#currentDay").text(dayjs().format("MMM D, YYYY"));
+  // color change for divs based on time of day
   $('.time-block').each(function() {
     var id = $(this).attr('id').split('-')[1];
     var rowHour = parseInt(id);
-    if (hour > rowHour) {
-      $(this).addClass('past');
-    } else if (hour < rowHour) {
-      $(this).addClass('future');
-    } else {
-      $(this).addClass('present');
-    }
+    hour > rowHour 
+    ? $(this).addClass('past') 
+    : (hour < rowHour) ? $(this).addClass('future') 
+    : $(this).addClass('present');
   });
+  // click event for all buttons to save input to localStorage
   $(".saveBtn").on("click", function() {
     var inputText = $(this).parent().children(".description").val();
     var inputParent = $(this).parent().attr("id");
     localStorage.setItem(inputParent, inputText);
   });
+  // for loop to getItem from localStorage and populate textarea in html
 for (let i = 9; i < 18; i++) {
   var savedInput = (localStorage.getItem("hour-" + [i]));
   $("#hour-" + [i]).children(".description").text(savedInput);
