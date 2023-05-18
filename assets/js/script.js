@@ -19,8 +19,11 @@ $(function () {
 
   // click event to clear all localStorage and refresh browser
   $(".clearBtn").on("click", function() {
-    localStorage.clear();
-    location.reload();
+    var clearForm = confirm("This will clear ALL saved text! Are you sure?");
+    if (clearForm === true) {
+      localStorage.clear();
+      location.reload();
+    }
   });
 
   // for loop to getItem from localStorage and populate textarea in html
