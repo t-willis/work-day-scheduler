@@ -32,4 +32,6 @@ The background color of each element changes based on the time of day. Grey deno
 
 To use this webapp all you have to do is type whatever you want in the hourly text-boxes and click the save button to the right. Any time you refresh your browser or return to the page the previously entered text will re-populate the appropriate field.
 
+If you want to clear all text-boxes, at the beginning of a new day for example, all you have to do is click the red button at the bottom right of the page. A prompt will appear and you can confirm or deny the function happening.
+
 ---
