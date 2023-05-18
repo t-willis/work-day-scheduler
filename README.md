@@ -1,6 +1,6 @@
 # Work Day Scheduler
 
-A daily planner that updates dynamically using jQuery.
+A daily planner that updates dynamically using jQuery, Day.js, and Bootstrap.
 
 ---
 
